@@ -15,34 +15,34 @@ const {
     Presence,
     Mimetype,
     GroupSettingChange
-} = require("@adiwajshing/baileys")
+} = require("@apri/baileys")
 
 const { wait, simih, getBuffer, h2k, generateMessageID, getGroupAdmins, getRandom, banner, start, info, success, close } = require('./lib/functions')
 const { fetchJson } = require('./lib/fetcher')
 const { recognize } = require('./lib/ocr')
 const { color, bgcolor } = require('./lib/color')
-const { help } = require('./FADHIL/help')
-const { rules } = require('./FADHIL/rules')
-const { bahasa } = require('./FADHIL/bahasa')
-const { donasi } = require('./FADHIL/donasi')
-const { limits } = require('./FADHIL/limit')
-const { bokep } = require('./FADHIL/bokep.js')
-const { ownermenu } = require('./FADHIL/ownermenu.js')
-const { groupmenu } = require('./FADHIL/groupmenu.js')
-const { mediamenu } = require('./FADHIL/mediamenu.js')
-const { nsfwmenu } = require('./FADHIL/nsfwmenu.js')
-const { listmenu } = require('./FADHIL/listmenu.js')
-const { funmenu } = require('./FADHIL/funmenu.js')
-const { makermenu } = require('./FADHIL/makermenu.js')
+const { help } = require('./APRI/help')
+const { rules } = require('./APRI/rules')
+const { bahasa } = require('./APRI/bahasa')
+const { donasi } = require('./APRI/donasi')
+const { limits } = require('./APRI/limit')
+const { bokep } = require('./APRI/bokep.js')
+const { ownermenu } = require('./APRI/ownermenu.js')
+const { groupmenu } = require('./APRI/groupmenu.js')
+const { mediamenu } = require('./APRI/mediamenu.js')
+const { nsfwmenu } = require('./APRI/nsfwmenu.js')
+const { listmenu } = require('./APRI/listmenu.js')
+const { funmenu } = require('./APRI/funmenu.js')
+const { makermenu } = require('./APRI/makermenu.js')
 //jangan hiraukan ini!!,,,ini uji coba yang gagal:) kontol//
-//const { gabutmenu } = require('./FADHIL/gabutmenu')
-//const { ownermenu } = require('./FADHIL/ownermenu')
-//const { groupmenu } = require('./FADHIL/groupmenu')
-//const { vipmenu } = require('./FADHIL/vipmenu')
-//const { nsfwmenu } = require('./FADHIL/nsfwmenu')
-//const { creatormenu } = require('./FADHIL/creatormenu')
-//const { downloadmenu } = require('./FADHIL/downloadmenu')
-//const { allmenu } = require('./FADHIL/allmenu')
+//const { gabutmenu } = require('./APRI/gabutmenu')
+//const { ownermenu } = require('./APRI/ownermenu')
+//const { groupmenu } = require('./APRI/groupmenu')
+//const { vipmenu } = require('./APRI/vipmenu')
+//const { nsfwmenu } = require('./APRI/nsfwmenu')
+//const { creatormenu } = require('./APRI/creatormenu')
+//const { downloadmenu } = require('./APRI/downloadmenu')
+//const { allmenu } = require('./APRI/allmenu')
 
 const fs = require('fs')
 const moment = require('moment-timezone')
@@ -79,8 +79,8 @@ const anlink = JSON.parse(fs.readFileSync('./database/json/antilink.json'))
 const vcard = 'BEGIN:VCARD\n'
             + 'VERSION:3.0\n'
             + 'FN:FADHIL GRAPHY\n'//GANTI NAMA LU COK
-            + 'ORG:Creator FadhilBot;\n'//GANTI NAMA LU!!
-            + 'TEL;type=CELL;type=VOICE;waid=6288221608614:+62 882-2160-8614\n'//GANTI NOMOR LU
+            + 'ORG:Creator zxbot|APRI;\n'//APRI
+            + 'TEL;type=CELL;type=VOICE;waid=6288221608614:+62 882-2160-8614\n'//+6282191563771
             + 'END:VCARD'
 
 limitt = 'UNLIMITED'
@@ -208,10 +208,10 @@ async function starts() {
 			
 			]
 			const ownerNumber = [
-			"6288221608614@s.whatsapp.net"//GANTI NOMOR LU
+			"6288221608614@s.whatsapp.net"//6282191563771
 			]
 			premium = [
-			"6288221608614@s.whatsapp.net","6283102650464@s.whatsapp.net"//GANTI NOMOR YAG MAU DI PREM, GABISA NYIMPEN DI DATABASE!!
+			"6288221608614@s.whatsapp.net","6283102650464@s.whatsapp.net"//6282191563771
 			]
 			
 			const apakahh = [
@@ -517,7 +517,7 @@ async function starts() {
 			case 'help':
 			case 'menu':
 			case 'cmd':
-			case 'fadhil':
+			case 'apri':
 				if (isBanned) return reply(mess.only.benned)
 				if (!isUser) return reply(mess.only.userB)
 				uptime = process.uptime()
@@ -2491,7 +2491,7 @@ async function starts() {
 						reply('Suksess broadcast')
 					} else {
 						for (let _ of anu) {
-							sendMess(_.jid, `[ *FADHILBOT BROADCAST* ]\n\n${body.slice(4)}`)
+							sendMess(_.jid, `[ *zxbot|APRI BROADCAST* ]\n\n${body.slice(4)}`)
 						}
 						reply('Suksess broadcast')
 					}
@@ -3365,7 +3365,7 @@ starts()
 /*
 * THANGKS TO :
 * FARHAN XCODE 7
-* FADHIL GRAPHY
+* APRI ANTOKERISTIAN
 * BRYAN RAFLY
 * AFFIS JUNIANTO
 * ANANG
