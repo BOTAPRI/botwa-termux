@@ -15,7 +15,7 @@ const {
     Presence,
     Mimetype,
     GroupSettingChange
-} = require("@adiwajshing/baileys")
+} = require("@apri/baileys")
 
 const { wait, simih, getBuffer, h2k, generateMessageID, getGroupAdmins, getRandom, banner, start, info, success, close } = require('./lib/functions')
 const { fetchJson } = require('./lib/fetcher')
